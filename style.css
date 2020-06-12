@@ -26,7 +26,7 @@ body {
     z-index: 99;
 }
 #main {
-    width: 360px;
+    width: 330px;
     background-color: #fff;
     position: absolute;
     border-radius: 15px;
@@ -45,6 +45,7 @@ body {
 #player {
     padding: 25px;
     color: #333;
+    padding-bottom: 80px;
 }
 #songTitle {
     text-align: center;
@@ -52,7 +53,7 @@ body {
     font-family: monospace;
     font-size: 18px;
     position: absolute;
-    top: 60%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -115,5 +116,48 @@ body {
     border-radius: 50%;
     margin-left: -7px;
     transform: scale(2);
-
+}
+#currentTime {
+    position: absolute;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    left: 33%;
+    top: 88%;
+    transform: translate(-50%,-50%);
+}
+#volume {
+    position: absolute;
+    top: 88%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+#volumeIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    justify-content: center;
+    cursor: pointer;
+    background-color: darkorange;
+    border-radius: 50%;
+}
+#volume:hover {
+    left: 10%;
+    transition: ease-in 2s;
+}
+#volumeIcon i {
+    width: 20%;
+    top: 50%;
+    left: 37%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+#volumeBar {
+    position: absolute;
+    width: 70px;
+    height: 22px;
+    top: 100%;
+    display: none;
+    background-color: darkorange;
 }
