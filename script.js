@@ -44,6 +44,7 @@ let poster = [
 let songTitle = document.getElementById('songTitle');
 let fillBar = document.getElementById('fill');
 let currentTime = document.getElementById('currentTime');
+let range = document.getElementById('range');
 
 let currentSong = 0;
 
@@ -118,3 +119,15 @@ function totalTime(seconds) {
         $('#bg img').attr('src', poster[currentSong]); // Меняет фон сзади
         songTitle.textContent = nameSongs[currentSong]; // Текст песни прослеживает
     }
+range.onchange = function() {
+    if (this.value == this.min) {
+        songs[currentSong].volume = 0;
+        $('#volumeIcon').html('<i class="fa fa-volume-off"></i>');
+    } else if (this.value = 50) {
+        songs[currentSong].volume = 0.5;
+        $('#volumeIcon').html('<i class="fa fa-volume-down"></i>');
+    } else if (this.value = this.max) {
+        songs[currentSong].volume = 1;
+        $('#volumeIcon').html('<i class="fa fa-volume-up"></i>');
+    }
+}
